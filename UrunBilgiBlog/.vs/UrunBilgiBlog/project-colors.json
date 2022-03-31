@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a0af094a-0874-40fe-aebc-7894fc00bbfe": {
+      "ProjectGuid": "a0af094a-0874-40fe-aebc-7894fc00bbfe",
+      "DisplayName": "UrunBilgiBlog",
+      "ColorIndex": 0
+    },
+    "2f61a686-7a39-4dc1-aa2d-5bc8327fa1d7": {
+      "ProjectGuid": "2f61a686-7a39-4dc1-aa2d-5bc8327fa1d7",
+      "DisplayName": "DataAccesLayer",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

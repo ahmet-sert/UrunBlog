@@ -1,0 +1,241 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+}
+
+.temp {
+    background-color: #25D5D9;
+    height: 500px;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    border-bottom: 1px solid silver;
+    
+    padding: 20px 0;
+}
+
+.logo {
+    width: 250px;
+    height:110px;
+    float: left;
+}
+
+    .logo img {
+        width: 250px;
+    }
+
+.user {
+    width: 250px;
+    float: right;
+    padding-top: 30px;
+    text-align: right;
+}
+
+    .user a {
+        color: gray;
+        text-decoration: none;
+        padding: 0 20px;
+    }
+
+.content {
+    width: 845px;
+    padding: 20px 10px 0 0;
+    float: left;
+    border-right: 1px solid silver;
+}
+
+.menucontainer {
+    width: 233px;
+    padding: 0px 10px 0 0;
+    float: right;
+    min-height: 520px;
+}
+
+.arthicle {
+}
+
+.title {
+    padding: 10px 0;
+    color: dimgray;
+}
+
+.image img {
+    width: 300px;
+    height: 219px;
+    padding-right: px;
+    text-align: center;
+    border-radius:3px ;
+}
+
+.subcontent {
+    padding-top:10px;
+}
+
+.summary {
+    padding: 10px 0;
+    color: dimgray;
+}
+
+.button {
+    padding: 10px 0;
+}
+
+    .button a {
+        color: red;
+        text-decoration: none;
+    }
+
+.menucontainer {
+}
+
+    .menucontainer ul {
+        list-style-type: none;
+    }
+
+        .menucontainer ul a {
+            text-decoration: none;
+            color: teal;
+        }
+
+            .menucontainer ul a li {
+                padding: 7px 7px 7px 15px;
+                border-bottom: 1px solid #dedede;
+            }
+
+            .menucontainer ul a:hover li {
+                background-color: #e9e9e9;
+            }
+
+.yorum {
+    color: gray;
+}
+
+.yorumPanelBaslik {
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    padding: 20px 0px;
+}
+
+.YorumKutu {
+    width: 100%;
+}
+
+.yorumYapButton {
+    padding: 10px 70px;
+    background-color: silver;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
+
+.yorumitem {
+    padding: 10px 0;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+}
+
+    .yorumitem label {
+        color: orangered;
+    }
+
+    .yorumitem p {
+    }
+
+.urun {
+    width: 305px;
+    height: 330px;
+    border: 1px solid #0000008c;
+    padding: 40px;
+    border-radius: 13px;
+    text-align: center;
+    float: left;
+    margin: 15px;
+}
+    .urun:hover {
+        -webkit-box-shadow: 5px 0px 15px 1px rgba(0,0,0,0.44);
+        box-shadow: 5px 0px 15px 1px rgba(0,0,0,0.44);
+        cursor: pointer;
+    }
+    .urun.Urunisim {
+        color: #003177;
+        padding: 3px 40px;
+        border-radius: 3px;
+        font-size: 10pt;
+        border: 2px solid silver;
+
+    }
+.urunbilgi {
+    color: #003177;
+    padding: 3px 40px;
+    border-radius: 3px;
+    font-size: 10pt;
+    text-decoration:none;
+    border: 2px solid silver;
+}
+    .urunbilgi a {
+        color: cadetblue;
+        text-decoration: none;
+    }
+        .urunbilgi  :hover {
+            background-color: #003177;
+            
+        }
+.altmenu {
+    border-top: 1px solid silver;
+    border-bottom: 3px solid silver;   
+    width:855px;
+    height: 300px;
+   
+   
+}
+
+    .altmenu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0px;
+    }
+
+        .altmenu ul li {
+            padding: 7px;
+            float: left;
+            color: gray;
+            font-size: 15pt;
+        }
+
+            .altmenu ul li:hover {
+                background-color: #cfcfcf;
+                color: #1a1a1a;
+            }
+.Userresim {
+    width: 200px;
+    float: right;
+    
+    
+}
+.userdiv{
+  width:460px;
+}
+.UyeButton {
+    padding: 10px 70px;
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* .silder{
+     width:500px;
+     height:250px;
+     
+ }*/

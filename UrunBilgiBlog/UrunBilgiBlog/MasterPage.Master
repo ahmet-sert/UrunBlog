@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="UrunBilgiBlog.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="assets/css/mainstyle.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+           <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="Default.aspx"> <img src="Images/resim.png" /></a>
+                </div>
+                <div class="user">
+                   <asp:Panel ID="pnlGirisVar" runat="server">
+                <a href="KullaniciGuncelle.aspx"> Merhaba:</a> <asp:Label ID="lbl_uye" runat="server"></asp:Label> | <asp:LinkButton ID="lbtn_cikis" runat="server"  OnClick="lbtn_cikis_Click">Çıkış Yap</asp:LinkButton>
+
+                   </asp:Panel>
+                    <asp:Panel ID="pnl_girisyok" runat="server">
+                         <a href="UyeGiris.aspx">Giriş Yap</a>|<a href="UyeOl.aspx">Kayıt Ol</a>
+                    </asp:Panel>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+               <%-- <div class="silder">
+                    <img src="Images/reklam.png" />
+                </div>--%>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="menucontainer">
+                <ul>
+                    <a href='Default.aspx'><li>Kategoriler</li></a>
+                    <asp:Repeater ID="rp_kategoriler" runat="server">
+                        <ItemTemplate>
+                            <a href='Default.aspx?kid=<%# Eval("ID") %>'><li><%# Eval("Isim") %></li></a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>                       
+            </div>
+                 <div style="clear: both; height: 15px;"></div>
+            <div class=" altmenu">
+                <ul>
+                    <a href="#">
+                        <li>Hakkımızda</li>
+                    </a>
+                    <a href="#">
+                        <li>Gizlilik Sözleşmesi</li>
+                    </a>
+                    <a href="#">
+                        <li> Şartlar Ve Koşullar</li>
+                    </a>
+                    <a  href="Default.aspx">
+                        <li>Ürünler</li>
+                    </a>
+                    <a href="#">
+                        <li>Kategoriler</li>
+                    </a>
+                    <a  href="UyeOl.aspx">
+                        <li>Üye Ol</li>
+                    </a>
+                    <a  href="UyeGiris.aspx">
+                        <li>Giriş Yap</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

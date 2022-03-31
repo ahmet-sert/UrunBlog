@@ -1,0 +1,12 @@
+C:\Users\OFİS\Source\Repos\UrunBilgiBlog\DataAccesLayer\bin\Debug\DataAccesLayer.dll
+C:\Users\OFİS\Source\Repos\UrunBilgiBlog\DataAccesLayer\bin\Debug\DataAccesLayer.pdb
+C:\Users\OFİS\Source\Repos\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.AssemblyReference.cache
+C:\Users\OFİS\Source\Repos\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CoreCompileInputs.cache
+C:\Users\OFİS\Source\Repos\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.dll
+C:\Users\OFİS\Source\Repos\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.pdb
+C:\Users\user\Desktop\,gjhvg\We\UrunBilgiBlog\DataAccesLayer\bin\Debug\DataAccesLayer.dll
+C:\Users\user\Desktop\,gjhvg\We\UrunBilgiBlog\DataAccesLayer\bin\Debug\DataAccesLayer.pdb
+C:\Users\user\Desktop\,gjhvg\We\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\,gjhvg\We\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\,gjhvg\We\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.dll
+C:\Users\user\Desktop\,gjhvg\We\UrunBilgiBlog\DataAccesLayer\obj\Debug\DataAccesLayer.pdb

@@ -1,0 +1,605 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0AF094A-0874-40FE-AEBC-7894FC00BBFE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UrunBilgiBlog</RootNamespace>
+    <AssemblyName>UrunBilgiBlog</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44318</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\FormStyle.css" />
+    <Content Include="assets\css\mainstyle.css" />
+    <Content Include="assets\css\Uye.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\272354.png" />
+    <Content Include="Images\kapakresim %282%29.png" />
+    <Content Include="Images\resim.png" />
+    <Content Include="Images\resimkapak.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="KullaniciGuncelle.aspx" />
+    <Content Include="UrunBilgi.aspx" />
+    <Content Include="UyeGiris.aspx" />
+    <Content Include="UyeOl.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Yonetici\ckeditor\adapters\jquery.js" />
+    <Content Include="Yonetici\ckeditor\build-config.js" />
+    <Content Include="Yonetici\ckeditor\ckeditor.js" />
+    <Content Include="Yonetici\ckeditor\config.js" />
+    <Content Include="Yonetici\ckeditor\contents.css" />
+    <Content Include="Yonetici\ckeditor\lang\af.js" />
+    <Content Include="Yonetici\ckeditor\lang\ar.js" />
+    <Content Include="Yonetici\ckeditor\lang\az.js" />
+    <Content Include="Yonetici\ckeditor\lang\bg.js" />
+    <Content Include="Yonetici\ckeditor\lang\bn.js" />
+    <Content Include="Yonetici\ckeditor\lang\bs.js" />
+    <Content Include="Yonetici\ckeditor\lang\ca.js" />
+    <Content Include="Yonetici\ckeditor\lang\cs.js" />
+    <Content Include="Yonetici\ckeditor\lang\cy.js" />
+    <Content Include="Yonetici\ckeditor\lang\da.js" />
+    <Content Include="Yonetici\ckeditor\lang\de-ch.js" />
+    <Content Include="Yonetici\ckeditor\lang\de.js" />
+    <Content Include="Yonetici\ckeditor\lang\el.js" />
+    <Content Include="Yonetici\ckeditor\lang\en-au.js" />
+    <Content Include="Yonetici\ckeditor\lang\en-ca.js" />
+    <Content Include="Yonetici\ckeditor\lang\en-gb.js" />
+    <Content Include="Yonetici\ckeditor\lang\en.js" />
+    <Content Include="Yonetici\ckeditor\lang\eo.js" />
+    <Content Include="Yonetici\ckeditor\lang\es-mx.js" />
+    <Content Include="Yonetici\ckeditor\lang\es.js" />
+    <Content Include="Yonetici\ckeditor\lang\et.js" />
+    <Content Include="Yonetici\ckeditor\lang\eu.js" />
+    <Content Include="Yonetici\ckeditor\lang\fa.js" />
+    <Content Include="Yonetici\ckeditor\lang\fi.js" />
+    <Content Include="Yonetici\ckeditor\lang\fo.js" />
+    <Content Include="Yonetici\ckeditor\lang\fr-ca.js" />
+    <Content Include="Yonetici\ckeditor\lang\fr.js" />
+    <Content Include="Yonetici\ckeditor\lang\gl.js" />
+    <Content Include="Yonetici\ckeditor\lang\gu.js" />
+    <Content Include="Yonetici\ckeditor\lang\he.js" />
+    <Content Include="Yonetici\ckeditor\lang\hi.js" />
+    <Content Include="Yonetici\ckeditor\lang\hr.js" />
+    <Content Include="Yonetici\ckeditor\lang\hu.js" />
+    <Content Include="Yonetici\ckeditor\lang\id.js" />
+    <Content Include="Yonetici\ckeditor\lang\is.js" />
+    <Content Include="Yonetici\ckeditor\lang\it.js" />
+    <Content Include="Yonetici\ckeditor\lang\ja.js" />
+    <Content Include="Yonetici\ckeditor\lang\ka.js" />
+    <Content Include="Yonetici\ckeditor\lang\km.js" />
+    <Content Include="Yonetici\ckeditor\lang\ko.js" />
+    <Content Include="Yonetici\ckeditor\lang\ku.js" />
+    <Content Include="Yonetici\ckeditor\lang\lt.js" />
+    <Content Include="Yonetici\ckeditor\lang\lv.js" />
+    <Content Include="Yonetici\ckeditor\lang\mk.js" />
+    <Content Include="Yonetici\ckeditor\lang\mn.js" />
+    <Content Include="Yonetici\ckeditor\lang\ms.js" />
+    <Content Include="Yonetici\ckeditor\lang\nb.js" />
+    <Content Include="Yonetici\ckeditor\lang\nl.js" />
+    <Content Include="Yonetici\ckeditor\lang\no.js" />
+    <Content Include="Yonetici\ckeditor\lang\oc.js" />
+    <Content Include="Yonetici\ckeditor\lang\pl.js" />
+    <Content Include="Yonetici\ckeditor\lang\pt-br.js" />
+    <Content Include="Yonetici\ckeditor\lang\pt.js" />
+    <Content Include="Yonetici\ckeditor\lang\ro.js" />
+    <Content Include="Yonetici\ckeditor\lang\ru.js" />
+    <Content Include="Yonetici\ckeditor\lang\si.js" />
+    <Content Include="Yonetici\ckeditor\lang\sk.js" />
+    <Content Include="Yonetici\ckeditor\lang\sl.js" />
+    <Content Include="Yonetici\ckeditor\lang\sq.js" />
+    <Content Include="Yonetici\ckeditor\lang\sr-latn.js" />
+    <Content Include="Yonetici\ckeditor\lang\sr.js" />
+    <Content Include="Yonetici\ckeditor\lang\sv.js" />
+    <Content Include="Yonetici\ckeditor\lang\th.js" />
+    <Content Include="Yonetici\ckeditor\lang\tr.js" />
+    <Content Include="Yonetici\ckeditor\lang\tt.js" />
+    <Content Include="Yonetici\ckeditor\lang\ug.js" />
+    <Content Include="Yonetici\ckeditor\lang\uk.js" />
+    <Content Include="Yonetici\ckeditor\lang\vi.js" />
+    <Content Include="Yonetici\ckeditor\lang\zh-cn.js" />
+    <Content Include="Yonetici\ckeditor\lang\zh.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\az.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\en-au.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\es-mx.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\oc.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Yonetici\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Yonetici\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Yonetici\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Yonetici\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Yonetici\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Yonetici\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Yonetici\ckeditor\plugins\dialog\styles\dialog.css" />
+    <Content Include="Yonetici\ckeditor\plugins\icons.png" />
+    <Content Include="Yonetici\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Yonetici\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Yonetici\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Yonetici\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Yonetici\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Yonetici\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Yonetici\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Yonetici\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Yonetici\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Yonetici\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Yonetici\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Yonetici\ckeditor\plugins\pastefromgdocs\filter\default.js" />
+    <Content Include="Yonetici\ckeditor\plugins\pastefromlibreoffice\filter\default.js" />
+    <Content Include="Yonetici\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Yonetici\ckeditor\plugins\pastetools\filter\common.js" />
+    <Content Include="Yonetici\ckeditor\plugins\pastetools\filter\image.js" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\dialogs\dialog.css" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\skins\moono-lisa\scayt.css" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\az.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\en-au.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\en-ca.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\es-mx.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\oc.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ro.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\sr-latn.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\sr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Yonetici\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Yonetici\ckeditor\plugins\tableselection\styles\tableselection.css" />
+    <Content Include="Yonetici\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Yonetici\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Yonetici\ckeditor\plugins\widget\images\handle.png" />
+    <Content Include="Yonetici\ckeditor\samples\css\samples.css" />
+    <Content Include="Yonetici\ckeditor\samples\img\github-top.png" />
+    <Content Include="Yonetici\ckeditor\samples\img\header-bg.png" />
+    <Content Include="Yonetici\ckeditor\samples\img\header-separator.png" />
+    <Content Include="Yonetici\ckeditor\samples\img\logo.png" />
+    <Content Include="Yonetici\ckeditor\samples\img\logo.svg" />
+    <Content Include="Yonetici\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="Yonetici\ckeditor\samples\index.html" />
+    <Content Include="Yonetici\ckeditor\samples\js\sample.js" />
+    <Content Include="Yonetici\ckeditor\samples\js\sf.js" />
+    <Content Include="Yonetici\ckeditor\samples\old\ajax.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\api.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\appendto.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="Yonetici\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Yonetici\ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="Yonetici\ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="Yonetici\ckeditor\samples\old\datafiltering.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="Yonetici\ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\divreplace.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\index.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\inlineall.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\jquery.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\readonly.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\replacebycode.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\sample.css" />
+    <Content Include="Yonetici\ckeditor\samples\old\sample.js" />
+    <Content Include="Yonetici\ckeditor\samples\old\tabindex.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\uicolor.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\uilanguages.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="Yonetici\ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\dialog.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\dialog_ie.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\dialog_ie8.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\dialog_iequirks.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\editor.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\editor_gecko.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\editor_ie.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\editor_ie8.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\editor_iequirks.css" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\icons.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\icons_hidpi.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\arrow.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\close.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\hidpi\close.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\hidpi\lock-open.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\hidpi\lock.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\hidpi\refresh.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\lock-open.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\lock.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\refresh.png" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\images\spinner.gif" />
+    <Content Include="Yonetici\ckeditor\styles.js" />
+    <Content Include="Yonetici\ckeditor\vendor\promise.js" />
+    <Content Include="Yonetici\css\AdminLayout.css" />
+    <Content Include="Yonetici\css\FormDesign.css" />
+    <Content Include="Yonetici\css\YoneticiGiris.css" />
+    <Content Include="Yonetici\Default.aspx" />
+    <Content Include="Yonetici\Giris.aspx" />
+    <Content Include="Yonetici\KategoriEkle.aspx" />
+    <Content Include="Yonetici\KategoriGuncelle.aspx" />
+    <Content Include="Yonetici\KategoriListele.aspx" />
+    <Content Include="Yonetici\KategoriListeleGridView.aspx" />
+    <Content Include="Yonetici\UrunEkle.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciGuncelle.aspx.cs">
+      <DependentUpon>KullaniciGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniciGuncelle.aspx.designer.cs">
+      <DependentUpon>KullaniciGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UrunBilgi.aspx.cs">
+      <DependentUpon>UrunBilgi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UrunBilgi.aspx.designer.cs">
+      <DependentUpon>UrunBilgi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UyeGiris.aspx.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeGiris.aspx.designer.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UyeOl.aspx.cs">
+      <DependentUpon>UyeOl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeOl.aspx.designer.cs">
+      <DependentUpon>UyeOl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\KategoriEkle.aspx.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriEkle.aspx.designer.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\KategoriGuncelle.aspx.cs">
+      <DependentUpon>KategoriGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriGuncelle.aspx.designer.cs">
+      <DependentUpon>KategoriGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListele.aspx.cs">
+      <DependentUpon>KategoriListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListele.aspx.designer.cs">
+      <DependentUpon>KategoriListele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListeleGridView.aspx.cs">
+      <DependentUpon>KategoriListeleGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\KategoriListeleGridView.aspx.designer.cs">
+      <DependentUpon>KategoriListeleGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\UrunEkle.aspx.cs">
+      <DependentUpon>UrunEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\UrunEkle.aspx.designer.cs">
+      <DependentUpon>UrunEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\UrunGuncelle.aspx.cs">
+      <DependentUpon>UrunGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\UrunGuncelle.aspx.designer.cs">
+      <DependentUpon>UrunGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\UrunListele.aspx.cs">
+      <DependentUpon>UrunListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\UrunListele.aspx.designer.cs">
+      <DependentUpon>UrunListele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\UyeListele.aspx.cs">
+      <DependentUpon>UyeListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\UyeListele.aspx.designer.cs">
+      <DependentUpon>UyeListele.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\Yonetici.Master.cs">
+      <DependentUpon>Yonetici.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yonetici\Yonetici.Master.designer.cs">
+      <DependentUpon>Yonetici.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Yonetici\UrunGuncelle.aspx" />
+    <Content Include="Yonetici\UrunListele.aspx" />
+    <Content Include="Yonetici\UyeListele.aspx" />
+    <Content Include="Yonetici\Yonetici.Master" />
+    <Content Include="Yonetici\ckeditor\bender-runner.config.json" />
+    <Content Include="Yonetici\ckeditor\CHANGES.md" />
+    <Content Include="Yonetici\ckeditor\LICENSE.md" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Yonetici\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Yonetici\ckeditor\README.md" />
+    <Content Include="Yonetici\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="Yonetici\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="Yonetici\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="Yonetici\ckeditor\SECURITY.md" />
+    <Content Include="Yonetici\ckeditor\skins\moono-lisa\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccesLayer\DataAccesLayer.csproj">
+      <Project>{2f61a686-7a39-4dc1-aa2d-5bc8327fa1d7}</Project>
+      <Name>DataAccesLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UrunResimleri\Cover\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49678</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44318/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
